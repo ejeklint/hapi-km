@@ -1,0 +1,36 @@
+{
+    "name": "hapi-km",
+    "version": "1.0.0",
+    "description": "hapijs plugin wrapping kilometer.io's curl api",
+    "repository": "git://github.com/hapijs/wreck",
+    "main": "lib/index",
+    "scripts": {
+        "test": "lab -a code -c",
+        "test-cov-html": "lab -r html -o coverage.html -a code"
+    },
+    "engines": {
+        "node": ">=4.0.0"
+    },
+    "keywords": [
+        "hapijs",
+        "kilometer",
+        "kilometer.io",
+        "plugin",
+        "metrics"
+    ],
+    "author": "Per Ejeklint <ejeklint@me.com> (http://www.ejeklint.se)",
+    "license": "ISC",
+    "peerDependencies": {
+        "hapi": ">=11.1.0"
+    },
+    "dependencies": {
+        "hoek": "^4.0.0",
+        "wreck": "^7.2.0"
+    },
+    "devDependencies": {
+        "code": "^2.2.1",
+        "hapi": "^13.3.0",
+        "lab": "^10.3.2",
+        "nock": "^8.0.0"
+    }
+}
