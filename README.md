@@ -1,4 +1,6 @@
 # hapi-km
+[![Build Status](https://travis-ci.org/ejeklint/hapi-km.svg?branch=master)](https://travis-ci.org/ejeklint/hapi-km)
+
 [Hapi](http://hapijs.com) plugin wrapping [kilometer.io](http://kilometer.io)'s cURL api for easy access within the server. On successful registration, four new methods will be available on the server.methods object.
 
 Why cURL? Because kilometer.io's doesn't provide a JS library suitable for server side use.
