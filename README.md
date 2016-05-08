@@ -1,5 +1,7 @@
 # hapi-km
-[Hapi](http://hapijs.com) plugin wrapping [kilometer.io](http://kilometer.io)'s CURL api.
+[Hapi](http://hapijs.com) plugin wrapping [kilometer.io](http://kilometer.io)'s cURL api for easy access within the server. On successful registration, four new methods will be available on the server.methods object.
+
+Why cURL? Because kilometer.io's doesn't provide a JS library suitable for server side use.
 
 Installation:
 
@@ -69,18 +71,37 @@ server.start((err) => {
 });
 ```
 
-## `trackIdentifiedEvent(options, [callback])`
+## Methods
+
+### `trackIdentifiedEvent(options, [callback])`
 Tracks an identified event at kilometer.io.
 
-- `options` An object with the following keys
+- `options` An object with the following keys:
     - `user_id` A kilometer.io user id
     - `event_name` The name of the event_name
     - `event_properties` An object with one or more properties
         - `event_property` A property on the event_property
         - `event_property_2` Yet a property (opt.)
+- `callback` A optional function with signature `function(err, res)` with status of the call to kilometer.io.
 
-## `setUserProperty`
+### `setUserProperty(options, [callback])`
+Sets one or more user properties.
 
-## `increaseUserProperty`
+- `options` An object with one or more properties and their values:
+    - `foo_property`
+    - `bar_property`
+- `callback` A optional function with signature `function(err, res)` with status of the call to kilometer.io.
 
-## `decreaseUserProperty`
+### `increaseUserProperty(options, [callback])`
+Increases the value of a property.
+
+- `options` An object with one property and a numerical value to increase it with:
+    - `foo_property`
+- `callback` A optional function with signature `function(err, res)` with status of the call to kilometer.io.
+
+### `decreaseUserProperty(options, [callback])`
+Decreases the value of a property.
+
+- `options` An object with one property and a numerical value to decrease it with:
+    - `foo_property`
+- `callback` A optional function with signature `function(err, res)` with status of the call to kilometer.io.
