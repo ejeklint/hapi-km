@@ -1,9 +1,9 @@
 # hapi-km
 [![Build Status](https://travis-ci.org/ejeklint/hapi-km.svg?branch=master)](https://travis-ci.org/ejeklint/hapi-km)
 
-[Hapi](http://hapijs.com) plugin wrapping [kilometer.io](http://kilometer.io)'s cURL api for easy access within the server. On successful registration, four new methods will be available on the server.methods object.
+[Hapi](http://hapijs.com) plugin wrapping [kilometer.io](http://kilometer.io)'s REST api for easy access within the server. On successful registration, four new methods will be available on the server.methods object.
 
-Why cURL? Because kilometer.io's doesn't provide a JS library suitable for server side use.
+Why this plugin? Because kilometer.io's doesn't provide a JS library suitable for server side use.
 
 Installation:
 
@@ -15,7 +15,6 @@ Example usage:
 'use strict';
 
 const Hapi = require('hapi');
-const Boom = require('boom');
 
 // Create a server with a host and port
 const server = new Hapi.Server();
@@ -69,6 +68,7 @@ server.start((err) => {
     if (err) {
         throw err;
     }
+    
     console.log('Server running at:', server.info.uri);
 });
 ```

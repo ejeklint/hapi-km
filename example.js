@@ -1,7 +1,6 @@
 'use strict';
 
 const Hapi = require('hapi');
-const Boom = require('boom');
 
 // Create a server with a host and port
 const server = new Hapi.Server();
