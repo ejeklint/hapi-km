@@ -3,8 +3,6 @@
 
 [Hapi](http://hapijs.com) plugin wrapping [kilometer.io](http://kilometer.io)'s REST api for easy access within the server. On successful registration, four new methods will be available on the server.methods object.
 
-Why this plugin? Because kilometer.io's doesn't provide a JS library suitable for server side use.
-
 Installation:
 
 `npm install --save hapi-km`
@@ -68,7 +66,7 @@ server.start((err) => {
     if (err) {
         throw err;
     }
-    
+
     console.log('Server running at:', server.info.uri);
 });
 ```

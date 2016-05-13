@@ -1,7 +1,7 @@
 {
     "name": "hapi-km",
-    "version": "1.0.0",
-    "description": "hapijs plugin wrapping kilometer.io's curl api",
+    "version": "1.0.1",
+    "description": "hapijs plugin wrapping kilometer.io's REST api",
     "repository": "https://github.com/ejeklint/hapi-km",
     "main": "lib/index",
     "scripts": {
