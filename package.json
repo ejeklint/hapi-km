@@ -2,7 +2,7 @@
     "name": "hapi-km",
     "version": "1.0.0",
     "description": "hapijs plugin wrapping kilometer.io's curl api",
-    "repository": "git://github.com/hapijs/wreck",
+    "repository": "https://github.com/ejeklint/hapi-km",
     "main": "lib/index",
     "scripts": {
         "test": "lab -a code -c",
